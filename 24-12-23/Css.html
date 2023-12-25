@@ -1,3 +1,4 @@
+<!-- padding adalah alternatif yang lebih baik untuk tinggi dan lebar -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,22 +11,50 @@
       background-color: rgb(167, 16, 16);
       color: #fff;
       border: none;
-      height: 36px;
-      width: 105px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 16px;
+      padding-right: 16px;
       border-radius: 5px;
       cursor: pointer;
+      margin-right: 8px;
+      margin-left: 20px;
+      transition: opacity 0.15s;
+      vertical-align: top;
     }
+
+    /* jadi hover ini sendiri berguna ketika pointer mengarah ke tempatnya itu akan berubah warna */
+    .a:hover {
+      opacity: 0.8;
+    }
+    /* jadi active ini berguna ketika tombol di klik */
+    .a:active {
+      opacity: 0.5;
+    }
+
     .b {
       background-color: #fff;
       border-color: rgb(45, 191, 249);
       border-style: solid;
       color: rgb(0, 183, 255);
-      height: 34px;
-      width: 70px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 16px;
+      padding-right: 16px;
       border-radius: 5px;
       cursor: pointer;
-      margin-left: 10px;
+      
+      transition: background-color 0.15s, color 0.15s;
+      
     }
+    .b:hover {
+      background-color: rgb(0, 183, 255);
+      color: #fff;
+    }
+    .b:active {
+      opacity: 0.7;
+    }
+
     .c {
       background-color: rgb(45, 191, 249);
       border-color: rgb(45, 191, 249);
@@ -38,6 +67,12 @@
       margin-left: 10px;
       font-weight: bold;
       font-size: 15px;
+      transition: box-shadow 0.15s;
+      vertical-align: top;
+    }
+    .c:hover {
+      /* posisi pertama horizontal, kedua vertikal, blur, warna nya */
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
     }
   </style>
   <body>
@@ -46,3 +81,4 @@
     <button class="c">Tweet</button>
   </body>
 </html>
+
